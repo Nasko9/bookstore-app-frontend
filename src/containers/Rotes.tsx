@@ -1,6 +1,9 @@
 import { Route, Routes as Switch } from "react-router-dom";
 
-// Pages
+// User Pages
+import Login from "./Auth/Login";
+import Register from "./Auth/Register";
+// Book pages
 import CreateBook from "./book/CreateBook";
 import DeleteBook from "./book/DeleteBook";
 import EditBook from "./book/EditBook";
@@ -14,6 +17,9 @@ export default function Rotes() {
     <Switch>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+
         <Route path="/books/create" element={<CreateBook />} />
         <Route path="/books/create" element={<ShowBook />} />
         <Route path="/books/create" element={<EditBook />} />
